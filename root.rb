@@ -19,7 +19,7 @@ end
 # ERRORS:
 def wrong_path
   puts "==============================="
-  puts "Analysis failed! Prompted path is not correct .spi file!"
+  puts "Analysis failed! Prompted path is not correct .sp or .sr file!"
   exit!
 end
 #=============================================================================
@@ -27,7 +27,7 @@ end
 def prompt_reader(prompt)
   puts "==============================="
   puts "Analysing:: [#{prompt.chomp}]"
-  if prompt.chomp.include? ".spi"
+  if prompt.chomp.include? ".sp" or prompt.chomp.include? ".sr"
     begin
       file = File.open(prompt.chomp)
       file_analyser(file)
