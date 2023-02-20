@@ -1,6 +1,7 @@
 #=============================================================================
 # SPIRIT
 # v.0.1.
+VER = 0.1.0.
 #=============================================================================
 # ANALYSIS:
 def file_analyser(file)
@@ -46,8 +47,10 @@ while true
   print ">> "
   prompt = gets
 
-  if prompt.chomp == "end" # <--- not working
+  if prompt.chomp == "end"
     exit!
+  elsif prompt.chomp == "ver"
+    puts "Sp>rit version:: #{VER}"
   else
     prompt_reader(prompt)
   end
